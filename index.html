@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css" />
+
+
+
+
+
+
+    <title>Admin Dashboard </title>
+  </head>
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!--Offcanvas trigger-->
+<button class="navbar-toggler me-2 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample" ></span>
+</button>
+      <!--Offcanvas trigger-->
+    <a class="navbar-brand fw-bold text-uppercase me-auto" href="#">CollegeAdmin</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topNavBar" aria-controls="topNavBar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="topNavBar">
+      
+      <form class="d-flex ms-auto my-3 my-lg-0">
+        <div class="input-group">
+         <input type="search" class="form-control" placeholder="search" aria-label="search" aria-describedby="button-addon2">
+         <button class="btn btn-primary" type="button" id="button-addon2"><i class="bi bi-search"></i>
+         </button>
+        </div>
+      </form>
+        <ul class="navbar-nav mb-2 mb-lg-0">
+        
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-people-fill"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Feed</a></li>
+            <li><a class="dropdown-item" href="#">Help center</a></li>
+            <li><a class="dropdown-item" href="#">Notifications</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--navbar-->
+
+
+
+<!--Offcanvas-->
+
+
+<div class="offcanvas offcanvas-start bg-dark text-white sidebar-nav" 
+tabindex="-1" 
+id="offcanvasExample" 
+aria-labelledby="offcanvasExampleLabel">
+  
+
+
+  <div class="offcanvas-body p-0">
+    <nav class ="navbar-dark">
+      <ul class ="navbar-nav">
+        <li>
+          <div class="text-muted small fw-bold text-uppercase px-3">
+            Core
+          </div>
+        </li>
+        <li>
+          <a href="#" class="nav-link px-3 active">
+            <span class="me-2">
+              <i class="bi bi-speedometer2"></i>
+            </span>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="my-4">
+            <hr class="dropdown-divider bg-light" />
+        </li>
+        <li>
+          <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+          Interface
+          </div>
+        </li>
+        <li>
+          <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+           <span class="me-2"><i class="bi bi-grid-3x3-gap-fill"></i></span>
+            <span>Menu</span>
+            <span class="right-icon ms-auto">
+              <i class="bi bi-chevron-down"></i>
+            </span>
+           </a>
+           <div class="collapse" id="collapseExample">
+           <div>
+             <ul class="navbar-nav ps-3">
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"> <i class="bi bi-envelope"></i></span>
+                    <span>Email</span>
+                 </a>
+               </li>
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"><i class="bi bi-person"></i> </span>
+                    <span>Teacher</span>
+                 </a>
+               </li>
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"><i class="bi bi-people"></i></span>
+                    <span>Students</span>
+                 </a>
+               </li>
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"><i class="bi bi-bank"></i></span>
+                    <span>Class</span>
+                 </a>
+               </li>
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"><i class="bi bi-card-text"></i> </span>
+                    <span>Exam</span>
+                 </a>
+               </li>
+               <li>
+                 <a href="#" class="nav-link px-3">
+                   <span class="me-2"><i class="bi bi-cash-stack"></i> </span>
+                    <span>Fees</span>
+                 </a>
+               </li>
+              </ul>
+          </div>
+          </div>
+        </li>
+        <li>
+          <a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+           <span class="me-2"><i class="bi bi-gear"></i></span>
+            <span>Settings</span>
+           </a>
+        </li>
+
+      </ul> 
+    </div>
+  </div>
+</div>
+
+
+
+<!--offcanvas-->
+
+<main class="mt-5 pt-3">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 fw-bold fs-3">Dashboard</div>
+  </div>
+  
+<div class="row">
+    <div class="col-md-4 mb-3">
+      <div class="card text-black bg-info mb-3 h-100">
+      <div class="card-header">Teachers</div>
+      <div class="card-body">
+      <h5 class="card-title">80+</h5>
+      <p class="card-text">Over last Ten years</p>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-black bg-light mb-3 h-100">
+      <div class="card-header">Students</div>
+      <div class="card-body">
+      <h5 class="card-title">800+</h5>
+      <p class="card-text">Over last Ten years</p>
+  </div>
+</div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <div class="card text-black bg-warning mb-3 h-100">
+      <div class="card-header">Alumni</div>
+      <div class="card-body">
+      <h5 class="card-title">150+</h5>
+      <p class="card-text">Over last Ten years</p>
+  </div>
+</div>
+    </div>
+    
+  
+
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Charts
+        </div>
+        <div class="card-body">
+          <canvas class="chart" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+<!--CHANGE-->
+  <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Charts
+        </div>
+        <div class="card-body">
+          <canvas class="chart" width="400" height="200"></canvas>
+        </div>
+      </div>
+    </div>
+
+ 
+
+
+
+
+
+<!--CHANGE-->
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          Staff Data
+        </div>
+        <div class="card-body">
+        <div class="table-responsive">
+          <table id="example"
+          class="table table-stripped data-table"
+          style="width: 100%">
+  <thead>
+    <tr class="table-danger">
+      <th scope="col">Sr. no.</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Class</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="table-light">
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>FE</td>
+      <td>mark@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>FE</td>
+      <td>jacob@gmail.com</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>Wat</td>
+      <td>FE</td>
+      <td>lary@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>Jimmy</td>
+      <td>Tan</td>
+      <td>FE</td>
+      <td>jimmy@gmail.com</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">5</th>
+      <td>Jack</td>
+      <td>watson</td>
+      <td>SE</td>
+      <td>jack@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>Christopher</td>
+      <td>Chan</td>
+      <td>SE</td>
+      <td>christopher@gmail.com</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">7</th>
+      <td>Felix</td>
+      <td>Legas</td>
+      <td>SE</td>
+      <td>felix@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>Aron</td>
+      <td>Chan</td>
+      <td>TE</td>
+      <td>aron@gmail.com</td>
+    </tr>
+    <tr class="table-light">
+      <th scope="row">9</th>
+      <td>Chris</td>
+      <td>Wu</td>
+      <td>TE</td>
+      <td>chris@gmail.com</td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>Jaeboem</td>
+      <td>Lim</td>
+      <td>TE</td>
+      <td>jaebeom@gmail.com</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+</div>
+</main>
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
